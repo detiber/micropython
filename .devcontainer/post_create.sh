@@ -24,7 +24,7 @@ elif [ -f $HOME/install_build_env.log.active ]; then
   echo "After successful installation, start a new terminal to build CircuitPython."
 else
   echo "Starting initial setup of build environment, please wait"
-  nohup $HOME/circuitpython/.devcontainer/install_build_env.sh >> $HOME/nohup.out &
+  nohup /workspaces/circuitpython/.devcontainer/install_build_env.sh >> $HOME/nohup.out &
   echo "Use 'tail -f $HOME/install_build_env.log.active' to monitor progress."
   echo "After successful installation, start a new terminal to build CircuitPython."
 fi
