@@ -24,9 +24,9 @@ the following steps.
      triggered from `$HOME/.bashrc` and runs in the background).
 
   3. During creation, you can run the command
-     `tail -f /workspaces/install_build_env.log.active`
+     `tail -f $HOME/install_build_env.log.active`
      to see what is going on. Once finished the log file is available
-     as `/workspaces/install_build_env.log`.
+     as `$HOME/install_build_env.log`.
 
   4. To actually build CircuitPython, open a new terminal and run e.g.
 
