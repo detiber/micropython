@@ -23,10 +23,3 @@
 
 // Unsure if this is needed or not
 // #define CIRCUITPY_PSRAM_CHIP_SELECT (&pin_GPIO8)
-
-// #define DEFAULT_SD_SCK (&pin_GPIO14)
-// #define DEFAULT_SD_MOSI (&pin_GPIO15)
-// #define DEFAULT_SD_MISO (&pin_GPIO16)
-// #define DEFAULT_SD_CS (&pin_GPIO19)
-// #define DEFAULT_SD_CARD_DETECT (&pin_GPIO13)
-// #define DEFAULT_SD_CARD_INSERTED false
