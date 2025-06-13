@@ -9,14 +9,14 @@
 static const mp_rom_map_elem_t board_module_globals_table[] = {
     CIRCUITPYTHON_BOARD_DICT_STANDARD_ITEMS
 
+    // Neopixels
+    { MP_OBJ_NEW_QSTR(MP_QSTR_NEOPIXEL), MP_ROM_PTR(&pin_GPIO17) },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_NEOPIXEL0), MP_ROM_PTR(&pin_GPIO3) },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_NEOPIXEL1), MP_ROM_PTR(&pin_GPIO2) },
+
     // Primary uart
     { MP_ROM_QSTR(MP_QSTR_TX), MP_ROM_PTR(&pin_GPIO0) },
     { MP_ROM_QSTR(MP_QSTR_RX), MP_ROM_PTR(&pin_GPIO1) },
-
-    // Secondary uart (shared with secondary spi)
-    { MP_ROM_QSTR(MP_QSTR_TX1), MP_ROM_PTR(&pin_GPIO24) },
-    { MP_ROM_QSTR(MP_QSTR_RX1), MP_ROM_PTR(&pin_GPIO25) },
-
 
     // Analog pins
     { MP_OBJ_NEW_QSTR(MP_QSTR_A0), MP_ROM_PTR(&pin_GPIO40) },
@@ -44,26 +44,25 @@ static const mp_rom_map_elem_t board_module_globals_table[] = {
     { MP_OBJ_NEW_QSTR(MP_QSTR_SDA), MP_ROM_PTR(&pin_GPIO4) },
     { MP_OBJ_NEW_QSTR(MP_QSTR_SCL), MP_ROM_PTR(&pin_GPIO5) },
 
-    // secondary i2c (shared with primary spi)
-    { MP_OBJ_NEW_QSTR(MP_QSTR_SDA1), MP_ROM_PTR(&pin_GPIO22) },
-    { MP_OBJ_NEW_QSTR(MP_QSTR_SCL1), MP_ROM_PTR(&pin_GPIO23) },
-
     // primary spi
     { MP_ROM_QSTR(MP_QSTR_MISO), MP_ROM_PTR(&pin_GPIO20) },
     { MP_ROM_QSTR(MP_QSTR_CS), MP_ROM_PTR(&pin_GPIO21) },
     { MP_ROM_QSTR(MP_QSTR_SCK), MP_ROM_PTR(&pin_GPIO22) },
     { MP_ROM_QSTR(MP_QSTR_MOSI), MP_ROM_PTR(&pin_GPIO23) },
 
+    // secondary i2c (shared with primary spi)
+    { MP_OBJ_NEW_QSTR(MP_QSTR_SDA1), MP_ROM_PTR(&pin_GPIO22) },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_SCL1), MP_ROM_PTR(&pin_GPIO23) },
+
+    // Secondary uart (shared with secondary spi)
+    { MP_ROM_QSTR(MP_QSTR_TX1), MP_ROM_PTR(&pin_GPIO24) },
+    { MP_ROM_QSTR(MP_QSTR_RX1), MP_ROM_PTR(&pin_GPIO25) },
+
     // secondary spi
     { MP_ROM_QSTR(MP_QSTR_MISO1), MP_ROM_PTR(&pin_GPIO24) },
     { MP_ROM_QSTR(MP_QSTR_CS1), MP_ROM_PTR(&pin_GPIO25) },
     { MP_ROM_QSTR(MP_QSTR_SCK1), MP_ROM_PTR(&pin_GPIO26) },
     { MP_ROM_QSTR(MP_QSTR_MOSI1), MP_ROM_PTR(&pin_GPIO27) },
-
-    // Neopixels
-    { MP_OBJ_NEW_QSTR(MP_QSTR_NEOPIXEL), MP_ROM_PTR(&pin_GPIO17) },
-    { MP_OBJ_NEW_QSTR(MP_QSTR_NEOPIXEL0), MP_ROM_PTR(&pin_GPIO3) },
-    { MP_OBJ_NEW_QSTR(MP_QSTR_NEOPIXEL1), MP_ROM_PTR(&pin_GPIO2) },
 
     { MP_ROM_QSTR(MP_QSTR_I2C), MP_ROM_PTR(&board_i2c_obj) },
     { MP_ROM_QSTR(MP_QSTR_SPI), MP_ROM_PTR(&board_spi_obj) },
