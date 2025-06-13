@@ -20,6 +20,3 @@
 
 #define DEFAULT_UART_BUS_RX (&pin_GPIO1)
 #define DEFAULT_UART_BUS_TX (&pin_GPIO0)
-
-// Unsure if this is needed or not
-// #define CIRCUITPY_PSRAM_CHIP_SELECT (&pin_GPIO8)
