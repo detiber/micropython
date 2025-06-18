@@ -7,8 +7,11 @@
 #define MICROPY_HW_BOARD_NAME "Jumperless v5"
 #define MICROPY_HW_MCU_NAME "rp2350b"
 
-#define MICROPY_HW_NEOPIXEL (&pin_GPIO17)
-#define MICROPY_HW_NEOPIXEL_COUNT (300)
+#define CIRCUITPY_DEBUG_TINYUSB 1
+
+// removed to avoid using these as status LEDs, which is the default
+// #define MICROPY_HW_NEOPIXEL (&pin_GPIO17)
+// #define MICROPY_HW_NEOPIXEL_COUNT (300)
 
 #define DEFAULT_I2C_BUS_SCL (&pin_GPIO5)
 #define DEFAULT_I2C_BUS_SDA (&pin_GPIO4)
@@ -16,7 +19,6 @@
 #define DEFAULT_SPI_BUS_SCK (&pin_GPIO22)
 #define DEFAULT_SPI_BUS_MOSI (&pin_GPIO20)
 #define DEFAULT_SPI_BUS_MISO (&pin_GPIO23)
-#define DEFAULT_SPI_BUS_SS (&pin_GPIO21)
 
 #define DEFAULT_UART_BUS_RX (&pin_GPIO1)
 #define DEFAULT_UART_BUS_TX (&pin_GPIO0)
